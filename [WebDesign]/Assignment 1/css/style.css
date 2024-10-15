@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../images/image1.jpg) right bottom no-repeat, url(../images/image2.jpg) left top no-repeat;
+	background-attachment: fixed, scroll;
+	background-size: 10rem, contain;
+	background-clip: border-box;
+	border: 10px solid pink;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mainDiv > * {
+	width: 50rem;
+	height: 7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 10px;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.div1 {
+	color: green;
+	background: #3498db;
+}
+
+.div2 {
+	color: blue;
+	background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.div3 {
+	background: radial-gradient(circle, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+}
+
+.div4 {
+	color: tomato;
+	background: rgba(46, 204, 113, 0.5);
+}
+
+.div5 {
+	color: black;
+	background: #2ecc71;
+}
