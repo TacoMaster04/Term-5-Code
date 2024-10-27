@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let person = {
+			//Key: value
+			name: "Mazen",
+			age: 16,
+			city: "Alex",
+			//Method
+			greet: function () {
+				return `Hello ${this.name}`;
+			}
+		};
+
+		//console.log(person);
+
+		person.age = 30;
+
+		console.log(person);
+		console.log(person.greet());
+
+		for (obj in person) {
+			console.log(person[obj]);
+		}
+
+		for (obj in person) {
+			console.log(obj); // Keys
+			console.log(person[obj]); // Values
+		}
+
+		let person2 = {
+			firstName: "Mazen",
+			lastName: "Elsayed",
+			age: {
+				year: 16,
+				month: 5,
+				day: 20
+			}
+		}
+
+		console.log(person2.age.day);
+
+		let objectArray = {
+			name: "Mazen",
+			age: 16,
+			hobbies: ["Reading", "Coding", "Gaming"],
+		}
+
+		console.log(objectArray.hobbies[1]); // Coding
+
+	</script>
+</body>
+
+</html>
