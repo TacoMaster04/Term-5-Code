@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			width: 500px;
+			height: 500px;
+			border: solid black 5px;
+			padding: 15px;
+		}
+
+		.task {
+			margin-top: 5px;
+			width: 400px;
+			background-color: burlywood;
+			height: 50px;
+			border: solid 3px black;
+			line-height: 50px;
+			padding: 5px;
+		}
+
+		.task button {
+			float: right;
+			padding: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>TODO List</h1>
+		<div class="todoList">
+			<div class="task">Go To School<button onclick="deleteTask()">Delete</button></div>
+		</div>
+
+		<label for="listInput">Add to list</label>
+		<input type="text" id="listInput"><br>
+		<button onclick="addTask()">Add</button>
+	</div>
+
+
+	<script>
+		let tasks = ["Shopping", "Study", "Practice"];
+
+		function addTask() {
+			let task = document.querySelector("#listInput").value;
+
+			tasks.push(task);
+
+			drawTasks();
+		}
+
+		function deleteTask(taskText) {
+			for (let i = 0; i < tasks.length; i++) {
+				if (tasks[i] == taskText) {
+					tasks.splice(i, 1);
+				}
+			}
+
+			drawTasks();
+		}
+
+		function drawTasks() {
+			let newHtml = "";
+			for (let task of tasks) {
+				let taskHtml = `<div class="task">${task}<button onclick="deleteTask('${task}')">Delete</button></div>`;
+				newHtml = newHtml + taskHtml;
+			}
+
+			document.querySelector(".todoList").innerHTML = newHtml;
+
+			console.log(tasks)
+		}
+
+		drawTasks()
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<label for="num1">Number 1:</label>
+	<input type="text" name="num1" id="num1" placeholder="Input Number 1" required><br>
+
+	<label for="num2">Number 2:</label>
+	<input type="text" name="num2" id="num2" placeholder="Input Number 2" required><br>
+
+	<button onclick="onButtonClicked('add')">ADD</button>
+	<button onclick="onButtonClicked('multi')">MULTI</button><br>
+	<p id="result">Result:</p>
+
+	<script>
+		function onButtonClicked(type) {
+			let num1 = document.querySelector("#num1").value;
+			let num2 = document.querySelector("#num2").value;
+			let result = document.querySelector("#result");
+
+			let finalResult;
+			switch (type) {
+				case "add":
+					finalResult = Number(num1) + Number(num2);
+					break;
+				case "multi":
+					finalResult = Number(num1) * Number(num2);
+					break;
+				default:
+					break;
+			}
+
+			result.innerHTML = `<p id="result">Result: ${finalResult}</p>`;
+		}
+	</script>
+</body>
+
+</html>
