@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let userInfo = {
+			name: "🦙",
+			age: 10,
+			school: ['DSB', "BSA", "RLS"],
+			nationality: ["Eg", "Gr"],
+			cars: {
+				type: "bmw",
+				model: "123",
+				color: "Green"
+			},
+			hello: function () {
+				return `Hello ${this.name}`;
+			}
+		};
+
+		console.log(userInfo.nationality[1]);
+
+		userInfo.school.map(s => console.log(s));
+
+		for (let i = 0; i < userInfo.school.length; i++) {
+			console.log(`For Loop: ${userInfo.school[i]}`);
+		}
+
+		for (let obj in userInfo) {
+			console.log(`Key: ${obj}`);
+			console.log(`Value: ${userInfo[obj]}`);
+		}
+
+		console.log(userInfo.hello())
+	</script>
+</body>
+
+</html>

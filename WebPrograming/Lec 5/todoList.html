@@ -68,7 +68,7 @@
 			let newHtml = "";
 			for (let task of tasks) {
 				let taskHtml = `<div class="task">${task}<button onclick="deleteTask('${task}')">Delete</button></div>`;
-				newHtml = newHtml + taskHtml;
+				newHtml += taskHtml;
 			}
 
 			document.querySelector(".todoList").innerHTML = newHtml;

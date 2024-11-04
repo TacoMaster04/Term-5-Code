@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let one = "One";
+		var two = "two";
+
+		function func() {
+			var x = 1;
+			console.log(one);
+			console.log(two);
+		}
+		// console.log(x)
+		// func()
+		if (0) {
+			log(1);
+		} else {
+			log(0);
+		}
+
+		var x = null;
+		if (x == null) {
+			log(`Hi`);
+		}
+
+		log(null == 0);
+
+		let s = "12";
+
+		log(s !== 13);
+		/*
+		======================================================================
+		*/
+
+		let letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+		log(letters.length);
+		log(letters[4]);
+		log(letters[letters.length - 1]);
+
+		let arrayObj = [
+			"H",
+			12,
+			true,
+			null,
+			undefined,
+			{ name: "Z", age: 15 },
+			[1, 2, false]
+		];
+
+		log(arrayObj[6][1]);
+
+		function log(arg) {
+			console.log(arg);
+		}
+		/*
+		======================================================================
+		*/
+
+		let person = {
+			name: "Joe",
+			age: 14,
+			nationality: { country: "EG" },
+			skills: ["Sleeping", "Eating", "Sleeping"],
+			information: function () {
+				return log(`${this.name} is ${this.age} y/o with ${this.skills.map(s => s).join(", ")} skills`);
+			}
+		};
+
+		log(person.nationality.country);
+
+		person.information();
+
+		function getFullName(fName, lName) {
+			return `${fName} ${lName}`;
+		}
+
+		log(getFullName("John", "Doe"))
+	</script>
+</body>
+
+</html>
