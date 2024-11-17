@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1 id="welcome">Welcome to life</h1>
+	<p id="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus magnam laboriosam vero odit.
+		Laborum qui ab,
+		quasi voluptate reiciendis delectus quo impedit, corrupti vel excepturi illo quidem dolores similique in.</p>
+
+	<p id="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In nostrum nobis cumque rerum accusantium
+		corrupti, fugit autem tempora quia pariatur voluptatibus commodi est quas obcaecati repellat explicabo dolorem
+		alias ullam.</p>
+
+	<script>
+		let header = document.getElementById("welcome").innerHTML = "Welcome to my website";
+		let paragraph = document.createElement('p');
+
+		paragraph.textContent = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus magnam laboriosam vero odit. Laborum qui ab, quasi voluptate reiciendis delectus quo impedit, corrupti vel excepturi illo quidem dolores similique in.";
+		document.getElementById('paragraph').appendChild(paragraph);
+
+		document.getElementById("#p2").createElement("h1").textContent = "Hiiii";
+	</script>
+</body>
+
+</html>
