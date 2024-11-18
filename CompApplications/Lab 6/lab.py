@@ -52,13 +52,12 @@ print("===============================", end="\n\n")
 listOfNumbersCondition = [12, 75, 150, 180, 145, 525, 50]
 
 for number in listOfNumbersCondition:
-    if number % 5 == 0:
-        if number > 150:
-            print(number, "is divisible by 5 and greater than 150")
-            continue
-        elif number > 500:
-            print(number, "is divisible by 5 and greater than 500")
-            break
+    if number > 500:
+        break
+    elif number > 150:
+        continue
+    elif number % 5 == 0:
+        print(number, "is divisible by 5")
 
 print("===============================", end="\n\n")
 
