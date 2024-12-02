@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		async function addStudent() {
+			const studentName = document.getElementById("studentName").value;
+			const studentAddress = document.getElementById("studentAddress").value;
+
+			const newStudent = { name: studentName, address: studentAddress };
+
+			const response = await fetch("http://localhost:3000/student/create", {
+				method: "POST",
+				headers: { "content-type": "application/json" },
+				body: JSON.stringify(newStudent)
+			});
+
+			const result = await response.json();
+			alert(result.msg);
+		}
+
+		async function deleteStudent() {
+			const studentIndex = document.getElementById("studentIndex").value;
+
+			const response = await fetch(`http://localhost:3000/student/delete?index=${studentIndex}`);
+
+			const result = await response.json();
+			alert(result.msg);
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Student Management</h1>
+	<h2>Create Student</h2>
+	Name: <input type="text" name="studentName" id="studentName">
+	Address: <input type="text" name="studentAddress" id="studentAddress">
+	<button onclick="addStudent()">Add</button>
+
+	<h2>Delete Student</h2>
+	Index: <input type="text" name="studentIndex" id="studentIndex">
+	<button onclick="deleteStudent()">Delete</button>
+</body>
+
+</html>
