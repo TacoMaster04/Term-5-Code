@@ -82,7 +82,39 @@
 			return `${fName} ${lName}`;
 		}
 
-		log(getFullName("John", "Doe"))
+		log(getFullName("John", "Doe"));
+
+		let name = "Mazen";
+
+		name = "gasser";
+
+		let a = 1;  // assign
+		if (a == 1) { // compare
+
+		}
+
+		if (a === 1) { // compare value and type
+			1 === "1"; // false
+			1 === 1; // true
+			1 == true; // true
+
+		}
+
+		var student = { // object name
+			firstName: "Jane", // list of properties and values
+			lastName: "Doe",
+			age: 18,
+			height: 170,
+			phoneNumber: ["1234", "56789", "1230123"],
+			fullName: function () { // object function
+				return this.firstName + " " + this.lastName;
+			}
+		};
+		console.log(student.age);
+
+
+		Number();
+		String();
 	</script>
 </body>
 
